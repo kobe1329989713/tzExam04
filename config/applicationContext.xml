@@ -51,11 +51,16 @@
     </bean>
 
 
-    <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+   <!-- <bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
         <property name="sessionFactory" ref="sessionFactory" />
-    </bean>
+    </bean>-->
 
     <!-- 加载注解的事务 -->
-    <tx:annotation-driven transaction-manager="transactionManager"/>
+    <!--<tx:annotation-driven transaction-manager="transactionManager"/>-->
+
+    <!-- 以上配置完了，就可以用 Hibernate 来使用 增 删 查 改 了。
+
+        其实配置上面这些 就相当于是 new 对象样，然后赋值，它里面依懒于它，，就是这种？？？
+    -->
 
 </beans>
